@@ -1,29 +1,30 @@
 @import 'github-night.css';
 
 :root {
-    --text-color: #f0f3f6;
-    --bg-color: #0a0c10;
-    --side-bar-bg-color: #0a0c10;
+    --text-color: #e9e9e9;
+    --bg-color: #222222;
+    --side-bar-bg-color: #242424;
     --control-text-color: #a9aaab;
-    --primary-color: #f9826c;
-    --primary-btn-border-color: #f9826c;
+    --primary-color: #ffffff;
+    --primary-btn-border-color: #ffffff;
     --active-file-text-color: inherit;
-    --active-file-border-color: #f9826c;
-    --active-file-bg-color: #0a0c10;
-    --primary-btn-text-color: #f9826c;
-    --window-border: 0 solid #0a0c10;
-    --item-hover-bg-color: #272b33;
-    --item-hover-text-color: #f9826c;
-    --meta-content-color: #f9826c;
-    --search-select-text-color: #f9826c;
+    --active-file-border-color: #ffffff;
+    --active-file-bg-color: #393939;
+    --primary-btn-text-color: #ffffff;
+    --window-border: 1px solid #404040;
+    --item-hover-bg-color: #242424;
+    --item-codeblock-bg-color: #1b1b1b;
+    --item-hover-text-color: #ffffff;
+    --meta-content-color: #ffffff;
+    --search-select-text-color: #ffffff;
     --control-text-color: var(--text-color);
     --control-text-hover-color: var(--text-color);
-    --heading-char-color: #f9826c;
+    --heading-char-color: #ffffff;
     --active-toggle-btn-color: #192133;
     --blur-text-color: rgba(200, 200, 200, 0.33);
     --rawblock-edit-panel-bd: #272b33 !important;
     --select-text-bg-color: rgba(53, 82, 116, 0.97) !important;
-    --select-text-font-color: #fff !important;
+    --select-text-font-color: #ffffff !important;
     --color-border-secondary: #7a828e !important;
     /* Mermaid diagrams*/
     --mermaid-node-color: #b87f62 !important;
@@ -31,6 +32,7 @@
     --mermaid-contrast-color: #afe61d;
     --mermaid-theme: dark;
     --monospace: "SFMono-Regular";
+
 }
 
 
@@ -101,3 +103,74 @@ select[disabled]:hover {
     opacity: 0.5;
     border: 1px solid #8b949e;
 }
+
+/* white line under files/outline*/
+.info-panel-tab-border {
+    background-color: #ffffff !important;
+}
+
+/* Codeblock bg colour */
+.cm-s-inner.CodeMirror,
+.cm-s-inner .CodeMirror-gutters {
+    background-color: var(--item-codeblock-bg-color) !important;
+    border: 1px solid var(--item-codeblock-bg-color);
+}
+
+.cm-s-typora-default pre.cm-s-inner {
+    color: var(--text-color);
+}
+
+.code-tooltip {
+    background: var(--item-codeblock-bg-color);
+    border: 1px solid var(--item-codeblock-bg-color);
+  }
+
+  .auto-suggest-container {
+    background-color: var(--item-codeblock-bg-color);
+    border: 1px solid var(--item-codeblock-bg-color);
+}
+
+/* Scroll bar **/
+::-webkit-scrollbar-thumb {
+    background-color: #5c5c5c;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #848484;
+}
+
+/* strikethrough on completed tasks */
+.task-list-done {
+    /* styles for completed tasks */
+    text-decoration: line-through;
+}
+.task-list-not-done {
+    /* styles for incomplete tasks */
+}
+
+
+/*
+.md-fences,
+code,
+tt {
+  border: 1px solid #424242;
+  background-color: #42424280;
+  border-radius: 3px;
+  padding: 2px 4px 1px 4px;
+}
+.md-fences {
+  background-color: #212121;
+}
+*/
+
+.dropdown-menu .divider {
+	border-color: #454545;
+}
+
+.pin-outline #typora-sidebar {
+	background: inherit;
+	box-shadow: none;
+	border-right: 1px solid;
+	border-color: #454545;
+}
+
